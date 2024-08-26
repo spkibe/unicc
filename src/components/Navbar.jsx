@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// src/components/Navbar.jsx
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { bankData } from './UsBanks/Usbankdata'; // Adjust the path if necessary
 import { ukbankdata } from '../data/Ukdata';
@@ -11,6 +12,16 @@ const Navbar = () => {
   const [ukBanksDropdownVisible, setUkBanksDropdownVisible] = useState(false);
   const [canadaBanksDropdownVisible, setCanadaBanksDropdownVisible] = useState(false);
   const [russiaBanksDropdownVisible, setRussiaBanksDropdownVisible] = useState(false);
+
+  const [username, setUsername] = useState(''); // State for storing username
+
+  // Effect to get the username from local storage on component mount
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+    if (storedUser && storedUser.username) {
+      setUsername(storedUser.username); // Set the username if it exists
+    }
+  }, []);
 
   // Handlers for dropdowns
   const toggleDropdown = (setDropdownVisible) => setDropdownVisible((prev) => !prev);
@@ -36,7 +47,7 @@ const Navbar = () => {
               <a href="javascript:void(0);" className="nav-link dropdown-toggle user flex items-center">
                 <div className="media flex items-center">
                   <div className="media-body align-self-center">
-                    <h6 className="text-sm font-medium"><span>Hi,</span> spkib</h6>
+                    <h6 className="text-sm font-medium"><span>Hi,</span> {username || 'Guest'}</h6>
                   </div>
                 </div>
               </a>
@@ -153,9 +164,7 @@ const Navbar = () => {
                 )}
               </div>
 
-              {/* <NavLink to="/services" className="hover:text-gray-400">Services</NavLink> */}
               <NavLink to="/payment" className="hover:text-gray-400">Add Balances</NavLink>
-              {/* <NavLink to="/contact" className="hover:text-gray-400">Contact</NavLink> */}
             </div>
           </div>
         </div>
