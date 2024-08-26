@@ -34,8 +34,8 @@ const Hero = () => {
         <div className="lg:w-3/4 w-full flex flex-col">
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold">FAQ</h3>
-            <p className="mt-4">Welcome to the private shop ICOCLIQ!</p>
-            <p>For our customers' security, ICOCLIQ blocks IP addresses for all anonymous users to prevent them from being tracked.</p>
+            <p className="mt-4">Welcome to the private shop UNICC!</p>
+            <p>For our customers' security, UNICC blocks IP addresses for all anonymous users to prevent them from being tracked.</p>
             <p>Our store boasts a self-written engine, anti-DDoS system, and a robust server. We do not keep any logs!</p>
             <p>Attention! New return format. After buying the goods, you will have a countdown on the return time, which is currently 2 hours, enough to check your account. Please specify the correct details and always attach screenshots; otherwise, the return will be denied!</p>
             <p>Clients' personal data is stored in a database with non-standard encryption and guaranteed security.</p>
@@ -60,7 +60,7 @@ const Hero = () => {
         </div>
       </div>
       <footer className="w-full bg-gray-800 py-4 text-center text-gray-400">
-        <p>Copyright © 2024 <a href="" className="text-white">ICOCLIQ</a>, All rights reserved.</p>
+        <p>Copyright © 2024 <a href="" className="text-white">UNICC</a>, All rights reserved.</p>
       </footer>
     </div>
   );

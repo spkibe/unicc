@@ -39,7 +39,7 @@ const Navbar = () => {
       <header className="header navbar navbar-expand-sm bg-gray-800 text-white">
         <div className="flex justify-between items-center w-full py-2 px-4 relative">
           <div className="nav-logo align-self-center">
-            <a className="navbar-brand text-lg font-semibold" href="/">ICOCLIQ</a>
+            <a className="navbar-brand text-lg font-semibold" href="/">UNICC</a>
           </div>
 
           <ul className="navbar-item flex-row nav-dropdowns">
