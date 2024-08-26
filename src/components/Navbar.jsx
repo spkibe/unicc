@@ -153,9 +153,9 @@ const Navbar = () => {
                 )}
               </div>
 
-              <NavLink to="/services" className="hover:text-gray-400">Services</NavLink>
-              <NavLink to="/projects" className="hover:text-gray-400">Projects</NavLink>
-              <NavLink to="/contact" className="hover:text-gray-400">Contact</NavLink>
+              {/* <NavLink to="/services" className="hover:text-gray-400">Services</NavLink> */}
+              <NavLink to="/payment" className="hover:text-gray-400">Add Balances</NavLink>
+              {/* <NavLink to="/contact" className="hover:text-gray-400">Contact</NavLink> */}
             </div>
           </div>
         </div>
